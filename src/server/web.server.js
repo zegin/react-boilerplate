@@ -1,13 +1,19 @@
 const express = require('express')
+
 export default class WebServer {
-  constructor () {
+  constructor() {
     this.app = express()
     this.app.use(express.static('dist/public'))
+    this.app.use((req, res) => {
+      res.status(404)
+      res.send('Lost')
+    })
   }
-  start () {
+
+  start() {
     return new Promise((resolve, reject) => {
       try {
-        this.server = this.app.listen(3000, function () {
+        this.server = this.app.listen(3000, () => {
           resolve()
         })
       } catch (e) {
@@ -16,7 +22,8 @@ export default class WebServer {
       }
     })
   }
-  stop () {
+
+  stop() {
     return new Promise((resolve, reject) => {
       try {
         this.server.close(() => {

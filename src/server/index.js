@@ -1,10 +1,17 @@
 import WebServer from './web.server'
-let webServer = new WebServer();
-webServer.start()
+
+const webServer = new WebServer()
+
+/* eslint-disable no-console */
+
+webServer
+  .start()
   .then(() => {
     console.log('Web server started!')
   })
   .catch(err => {
     console.error(err)
     console.error('Failed to start web server')
-  });
+  })
+
+/* eslint-enable no-console */
