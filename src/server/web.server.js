@@ -1,5 +1,7 @@
 const express = require('express')
 
+/* eslint-disable no-console */
+
 export default class WebServer {
   constructor() {
     this.app = express()
@@ -36,3 +38,5 @@ export default class WebServer {
     })
   }
 }
+
+/* eslint-enable no-console */
