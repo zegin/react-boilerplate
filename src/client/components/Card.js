@@ -11,7 +11,7 @@ class Card extends React.Component {
 
   componentDidMount() {
     Axios.post('/api/test', {
-      password: 12345,
+      password: '12345',
     })
       .then(res => {
         this.setState({ content: res.data })
@@ -23,7 +23,7 @@ class Card extends React.Component {
 
   render() {
     const { content } = this.state
-    return content ? <div>{content}</div> : <div>Fetching data ...</div>
+    return content ? <div>{content}</div> : <div>Fetching data ... </div>
   }
 }
 

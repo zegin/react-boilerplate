@@ -4,6 +4,7 @@ import webpack from 'webpack'
 import express from 'express'
 import bodyParser from 'body-parser'
 import configDev from '../../build/webpack.dev.babel'
+import api from './api/routes'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -15,6 +16,8 @@ const compiler = webpack(configDev)
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use('/api', api)
+
 if (!isProd) {
   app.use(
     require('webpack-dev-middleware')(compiler, {
@@ -23,20 +26,6 @@ if (!isProd) {
   )
 
   app.use(require('webpack-hot-middleware')(compiler))
-
-  app.use('/api', (req, res, next) => {
-    const { password } = req.body
-    console.log(password)
-    if(password == '12345'){
-      next()
-    } else {
-      res.status(403).send()
-    }
-  })
-
-  app.post('/api/test', (req, res) => {
-    setTimeout(() => res.send('After 1second'), 1000)
-  })
 
   app.get('*', (req, res, next) => {
     const filename = path.join(compiler.outputPath, 'index.html')
