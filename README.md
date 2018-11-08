@@ -1,6 +1,8 @@
-# react-hot-express
+# React boilerplate
 
-Hot reloading starter project with React and Express.
+This is a opinionated react boilerplate based on my needs
+
+Forked from https://github.com/skyllo/react-hot-express
 
 # Dependencies
 - Webpack 4+
@@ -25,4 +27,16 @@ yarn build && yarn start
 Test
 ```
 yarn test
+```
+
+Storybook
+```
+yarn storybook
+```
+
+Lint
+```
+yarn lint
+or
+yarn lint:write
 ```
