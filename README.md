@@ -1,39 +1,28 @@
-# React-boilerplate
+# react-hot-express
 
-## Stack
+Hot reloading starter project with React and Express.
 
-### React
+# Dependencies
+- Webpack 4+
+- Babel 7+
+- React 16+
+- React Hot Loader 4+
+- Express 4+
+- Jest + Enzyme
+- ESLint
 
-### Express
-
-### Jest
-
-### Storybook
-
-### Eslint
-
-
-
-# How-to
-
-## Install
-
+# Commands
+Development
 ```
-$ yarn
+yarn dev
 ```
 
-## Start frontend only
-
-
+Production
 ```
-$ yarn dev
+yarn build && yarn start
 ```
-*Application running on : [localhost:9000](http://localhost:9000/)*
 
-
-## Start application
+Test
 ```
-$ yarn build
-$ yarn start
+yarn test
 ```
-*Application running on : [localhost:3000](http://localhost:3000/)*

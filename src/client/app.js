@@ -1,3 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import { hot } from 'react-hot-loader'
+import Header from './layout/Header'
+import Card from './components/Card'
 
-export default () => <div>Welcome to React Boilerplate App Ish ish ish !</div>
+const App = () => (
+  <Fragment>
+    <Header />
+    <Card />
+  </Fragment>
+)
+
+export default hot(module)(App)
