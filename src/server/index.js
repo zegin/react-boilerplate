@@ -4,7 +4,8 @@ import webpack from 'webpack'
 import express from 'express'
 import bodyParser from 'body-parser'
 import configDev from '../../build/webpack.dev.babel'
-import api from './api/routes'
+
+const api = require('./api/routes')
 
 const isProd = process.env.NODE_ENV === 'production'
 
