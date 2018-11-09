@@ -1,8 +1,8 @@
 {
-  "name": "web-youtube-later",
+  "name": "react-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "nodemon index.js --exec babel-node --watch src/server --watch build",
     "build": "npm run build:client && npm run build:server",
@@ -61,11 +61,5 @@
     "webpack": "^4.7.0",
     "webpack-dev-middleware": "^3.1.3",
     "webpack-hot-middleware": "^2.22.1"
-  },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(gif|ttf|eot|svg)$": "<rootDir>/test/client/__mocks__/fileMock.js"
-    },
-    "setupTestFrameworkScriptFile": "<rootDir>/test/client/testSetup.js"
   }
 }
