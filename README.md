@@ -9,8 +9,10 @@ Forked from https://github.com/skyllo/react-hot-express
 - Babel 7+
 - React 16+
 - React Hot Loader 4+
+- Axios
 - Express 4+
-- Jest + Enzyme
+- Jest + Enzyme + Supertest
+- Storybook
 - ESLint
 
 # Commands
@@ -32,11 +34,4 @@ yarn test
 Storybook
 ```
 yarn storybook
-```
-
-Lint
-```
-yarn lint
-or
-yarn lint:write
 ```
