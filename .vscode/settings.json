@@ -1,6 +1,6 @@
 {
     "eslint.workingDirectories": [
-        "./src",
+        "./src", "./test", 
     ],
     "eslint.options": {
         "configFile": "../.eslintrc.js"

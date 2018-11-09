@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Card demo 1`] = `
+<div>
+  Fetching data ... 
+</div>
+`;
+
+exports[`Storyshots Header demo 1`] = `
+<header>
+  Header
+</header>
+`;

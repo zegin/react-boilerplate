@@ -1,8 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 
-// const isProd = process.env.NODE_ENV === 'production';
-
 export default {
   output: {
     filename: '[name].js',
@@ -26,5 +24,5 @@ export default {
       filename: 'index.html',
       template: 'src/server/index.html'
     }),
-  ]
+  ],
 };

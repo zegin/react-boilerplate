@@ -11,6 +11,10 @@ router.use('/', (req, res, next) => {
   }
 })
 
+router.post('/', (req, res) => {
+  res.send()
+})
+
 router.post('/test', (req, res) => {
   setTimeout(() => res.send('Api response after 1 second'), 1000)
 })
